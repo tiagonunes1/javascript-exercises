@@ -12,8 +12,8 @@ const sumAll = function (min, max) {
       : [...Array(max - min + 1).keys()].map((i) => i + min);
 
   const sum =
-    typeof array === "string"
-      ? "ERROR"
+    array === "ERROR"
+      ? array
       : array.reduce((partialSum, a) => partialSum + a, 0);
 
   return sum;
